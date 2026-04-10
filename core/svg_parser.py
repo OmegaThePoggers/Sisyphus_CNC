@@ -12,7 +12,7 @@ class SVGParser:
         
         for path in paths:
             parsed_path = self._process_path(path)
-            if parsed_path:
+            if parsed_path is not None and len(parsed_path) > 0:
                 segments.append(parsed_path)
                 
         return segments
