@@ -50,13 +50,14 @@ class MainWindow(QMainWindow):
         
         # Serial Controls
         self.combo_ports = QComboBox()
-        self.refresh_ports()
         
         self.btn_connect = QPushButton("Connect")
         self.btn_connect.setCheckable(True)
         
         self.btn_set_center = QPushButton("Set Center (G92)")
         self.btn_set_center.setEnabled(False)
+        
+        self.refresh_ports()
         
         top_bar.addWidget(QLabel("Port:"))
         top_bar.addWidget(self.combo_ports)
