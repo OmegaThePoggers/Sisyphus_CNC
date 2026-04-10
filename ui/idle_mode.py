@@ -9,6 +9,8 @@ from PySide6.QtCore import Qt, QThread, Signal, QMutex, QMutexLocker
 from core.svg_parser import SVGParser
 from core.gcode_generator import GCodeGenerator
 from core.motion_planner import MotionPlanner
+from core.resampler import PathResampler
+import numpy as np
 
 class PlaylistWorker(QThread):
     progress_changed = Signal(str, int) # status text, percent 0-100
@@ -60,20 +62,39 @@ class PlaylistWorker(QThread):
                     self.error_occurred.emit(f"No valid paths in {filename}")
                     loop_index = (loop_index + 1) % len(paths)
                     continue
-                    
-                gcode = self.generator.generate(svg_paths)
                 
-                # In Phase 4, we always append return to center
-                curr_x, curr_y = 0.0, 0.0
-                if gcode:
-                    last = gcode[-1]
-                    mx = re.search(r'X([-0-9.]+)', last)
-                    my = re.search(r'Y([-0-9.]+)', last)
-                    if mx and my:
-                        curr_x, curr_y = float(mx.group(1)), float(my.group(1))
+                if self.transform_mode and loop_index < len(paths) - 1:
+                    next_path = paths[loop_index + 1]
+                    next_svg_paths = self.parser.parse_file(next_path)
+                    
+                    if next_svg_paths and len(svg_paths) == 1 and len(next_svg_paths) == 1:
+                        # Perform morph
+                        self.progress_changed.emit(f"Morphing {filename} to next...", 50)
                         
-                if not self.transform_mode:
-                    gcode.extend(self.planner.plan_return_to_center(curr_x, curr_y))
+                        path_a = svg_paths[0]
+                        path_b = next_svg_paths[0]
+                        points = 500
+                        
+                        resampled_a = PathResampler.resample_path(path_a, points)
+                        resampled_b = PathResampler.resample_path(path_b, points)
+                        
+                        gcode = []
+                        # 5 morph steps
+                        for alpha in np.linspace(0.0, 1.0, 5):
+                            interp = PathResampler.interpolate_paths(resampled_a, resampled_b, alpha)
+                            frame_gcode = self.generator.generate([interp])
+                            gcode.extend(frame_gcode)
+                            
+                    else:
+                        # Fallback if multiple disconnected paths (incompatible for simple morph)
+                        gcode = self.generator.generate(svg_paths)
+                        curr_x, curr_y = self._get_end_pos(gcode)
+                        gcode.extend(self.planner.plan_return_to_center(curr_x, curr_y))
+                else:
+                    gcode = self.generator.generate(svg_paths)
+                    curr_x, curr_y = self._get_end_pos(gcode)
+                    if not self.transform_mode:
+                        gcode.extend(self.planner.plan_return_to_center(curr_x, curr_y))
                 
                 self.progress_changed.emit(f"Drawing {filename}...", 50)
                 
@@ -97,6 +118,16 @@ class PlaylistWorker(QThread):
             
         self.all_finished.emit()
         
+    def _get_end_pos(self, gcode):
+        curr_x, curr_y = 0.0, 0.0
+        if gcode:
+            last = gcode[-1]
+            mx = re.search(r'X([-0-9.]+)', last)
+            my = re.search(r'Y([-0-9.]+)', last)
+            if mx and my:
+                curr_x, curr_y = float(mx.group(1)), float(my.group(1))
+        return curr_x, curr_y
+
     def stop(self):
         self._is_running = False
 
@@ -151,7 +182,7 @@ class IdleModeWidget(QWidget):
         self.btn_stop.setEnabled(False)
         
         self.chk_transform = QCheckBox("Enable Transform Mode (Phase 5)")
-        self.chk_transform.setEnabled(False) # Wait for Phase 5
+        self.chk_transform.setEnabled(True)
         
         self.lbl_status = QLabel("Ready")
         self.progress = QProgressBar()
@@ -216,6 +247,7 @@ class IdleModeWidget(QWidget):
         if not paths:
             return
             
+        self.worker.transform_mode = self.chk_transform.isChecked()
         self.worker.set_playlist(paths)
         self.worker.start()
         
