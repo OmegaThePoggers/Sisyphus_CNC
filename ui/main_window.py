@@ -1,3 +1,4 @@
+import json
 from PySide6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                              QPushButton, QLabel, QComboBox, QStatusBar, QStackedWidget,
                              QMessageBox)
@@ -6,6 +7,7 @@ from PySide6.QtCore import Qt
 from hardware.serial_controller import SerialController
 from ui.custom_mode import CustomModeWidget
 from ui.simulation_mode import SimulationModeWidget
+from ui.idle_mode import IdleModeWidget
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -37,7 +39,6 @@ class MainWindow(QMainWindow):
         
         # Navigation Buttons
         self.btn_idle = QPushButton("Idle Mode")
-        self.btn_idle.setEnabled(False) # Wait for Phase 4
         self.btn_custom = QPushButton("Custom Mode")
         self.btn_sim = QPushButton("Simulation")
         
@@ -69,8 +70,7 @@ class MainWindow(QMainWindow):
         self.stacked_widget = QStackedWidget()
         
         # Placeholder widgets for unimplemented modes
-        self.idle_widget = QLabel("Idle Mode (Phase 4)")
-        self.idle_widget.setAlignment(Qt.AlignCenter)
+        self.idle_widget = IdleModeWidget(self.serial_controller)
         
         self.custom_widget = CustomModeWidget(self.serial_controller)
         
