@@ -58,7 +58,7 @@ class CustomModeWidget(QWidget):
         # Placeholder for Canvas (Phase 2)
         self.lbl_preview = QLabel("SVG Preview Area (Phase 2)")
         self.lbl_preview.setAlignment(Qt.AlignCenter)
-        self.lbl_preview.setStyleSheet("background-color: #f0f0f0; border: 1px solid #ccc;")
+        self.lbl_preview.setStyleSheet("background-color: #2b2b2b; border: 1px solid #555; color: white;")
         self.lbl_preview.setMinimumSize(400, 300)
         
         # Log view
@@ -91,7 +91,7 @@ class CustomModeWidget(QWidget):
         file_path, _ = QFileDialog.getOpenFileName(self, "Open SVG", "", "SVG Files (*.svg)")
         if file_path:
             self.lbl_file_name.setText(file_path.split('/')[-1])
-            self.lbl_file_name.setStyleSheet("color: black;")
+            self.lbl_file_name.setStyleSheet("") 
             
             try:
                 paths = self.parser.parse_file(file_path)
