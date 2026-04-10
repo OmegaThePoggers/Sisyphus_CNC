@@ -1,0 +1,13 @@
+{
+    "feed_rate": 2000,
+    "acceleration": 180,
+    "workspace": {
+        "width": 210,
+        "height": 148.5,
+        "margin": 10
+    },
+    "serial": {
+        "port": "auto",
+        "baudrate": 115200
+    }
+}
