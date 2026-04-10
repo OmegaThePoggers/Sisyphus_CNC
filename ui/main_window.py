@@ -100,7 +100,6 @@ class MainWindow(QMainWindow):
         top_bar.addWidget(QLabel("Serial Port:"))
         
         self.combo_ports = QComboBox()
-        self.refresh_ports()
         top_bar.addWidget(self.combo_ports)
         
         self.btn_connect = QPushButton("Connect")
@@ -110,6 +109,8 @@ class MainWindow(QMainWindow):
         self.btn_set_center = QPushButton("Set Center (G92)")
         self.btn_set_center.setEnabled(False)
         top_bar.addWidget(self.btn_set_center)
+        
+        self.refresh_ports()
         
         top_bar.addStretch()
         
