@@ -29,13 +29,13 @@ class HomeWidget(QWidget):
         grid = QGridLayout()
         grid.setSpacing(20)
         
-        self.btn_idle = QPushButton("▶ Idle Mode\n(Playlist)")
+        self.btn_idle = QPushButton("Idle Mode\n(Playlist)")
         self.btn_idle.setMinimumSize(200, 150)
         
-        self.btn_custom = QPushButton("⚙ Custom Mode\n(Single Draw)")
+        self.btn_custom = QPushButton("Custom Mode\n(Single Draw)")
         self.btn_custom.setMinimumSize(200, 150)
         
-        self.btn_sim = QPushButton("📺 Simulation\n(Preview)")
+        self.btn_sim = QPushButton("Simulation\n(Preview)")
         self.btn_sim.setMinimumSize(200, 150)
         
         # Style the massive buttons
@@ -92,7 +92,7 @@ class MainWindow(QMainWindow):
         # Top Bar (Global Controls)
         top_bar = QHBoxLayout()
         
-        self.btn_home = QPushButton("🏠 Home")
+        self.btn_home = QPushButton("Home")
         self.btn_home.setFixedWidth(100)
         top_bar.addWidget(self.btn_home)
         
