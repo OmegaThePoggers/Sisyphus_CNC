@@ -1,13 +1,69 @@
 import json
 from PySide6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
                              QPushButton, QLabel, QComboBox, QStatusBar, QStackedWidget,
-                             QMessageBox)
+                             QMessageBox, QGridLayout, QSizePolicy)
 from PySide6.QtCore import Qt
 
 from hardware.serial_controller import SerialController
 from ui.custom_mode import CustomModeWidget
 from ui.simulation_mode import SimulationModeWidget
 from ui.idle_mode import IdleModeWidget
+
+class HomeWidget(QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        layout = QVBoxLayout(self)
+        layout.setAlignment(Qt.AlignCenter)
+        
+        lbl_title = QLabel("Sisyphus Controller")
+        font = lbl_title.font()
+        font.setPointSize(36)
+        font.setBold(True)
+        lbl_title.setFont(font)
+        lbl_title.setAlignment(Qt.AlignCenter)
+        
+        lbl_sub = QLabel("Select a drawing mode to begin")
+        lbl_sub.setAlignment(Qt.AlignCenter)
+        lbl_sub.setStyleSheet("color: #aaa; margin-bottom: 30px;")
+        
+        grid = QGridLayout()
+        grid.setSpacing(20)
+        
+        self.btn_idle = QPushButton("▶ Idle Mode\n(Playlist)")
+        self.btn_idle.setMinimumSize(200, 150)
+        
+        self.btn_custom = QPushButton("⚙ Custom Mode\n(Single Draw)")
+        self.btn_custom.setMinimumSize(200, 150)
+        
+        self.btn_sim = QPushButton("📺 Simulation\n(Preview)")
+        self.btn_sim.setMinimumSize(200, 150)
+        
+        # Style the massive buttons
+        btn_style = """
+            QPushButton {
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 10px;
+                background-color: #3b3b3b;
+            }
+            QPushButton:hover {
+                background-color: #4b4b4b;
+                border: 2px solid #5a9bd4;
+            }
+        """
+        self.btn_idle.setStyleSheet(btn_style)
+        self.btn_custom.setStyleSheet(btn_style)
+        self.btn_sim.setStyleSheet(btn_style)
+        
+        grid.addWidget(self.btn_idle, 0, 0)
+        grid.addWidget(self.btn_custom, 0, 1)
+        grid.addWidget(self.btn_sim, 0, 2)
+        
+        layout.addStretch()
+        layout.addWidget(lbl_title)
+        layout.addWidget(lbl_sub)
+        layout.addLayout(grid)
+        layout.addStretch()
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -29,60 +85,57 @@ class MainWindow(QMainWindow):
             self.config = {}
 
     def setup_ui(self):
-        # Central widget and layout
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         main_layout = QVBoxLayout(central_widget)
 
-        # Top Bar (Navigation & Connection)
+        # Top Bar (Global Controls)
         top_bar = QHBoxLayout()
         
-        # Navigation Buttons
-        self.btn_idle = QPushButton("Idle Mode")
-        self.btn_custom = QPushButton("Custom Mode")
-        self.btn_sim = QPushButton("Simulation")
-        
-        top_bar.addWidget(self.btn_idle)
-        top_bar.addWidget(self.btn_custom)
-        top_bar.addWidget(self.btn_sim)
+        self.btn_home = QPushButton("🏠 Home")
+        self.btn_home.setFixedWidth(100)
+        top_bar.addWidget(self.btn_home)
         
         top_bar.addSpacing(20)
+        top_bar.addWidget(QLabel("Serial Port:"))
         
-        # Serial Controls
         self.combo_ports = QComboBox()
+        self.refresh_ports()
+        top_bar.addWidget(self.combo_ports)
         
         self.btn_connect = QPushButton("Connect")
         self.btn_connect.setCheckable(True)
+        top_bar.addWidget(self.btn_connect)
         
         self.btn_set_center = QPushButton("Set Center (G92)")
         self.btn_set_center.setEnabled(False)
-        
-        self.refresh_ports()
-        
-        top_bar.addWidget(QLabel("Port:"))
-        top_bar.addWidget(self.combo_ports)
-        top_bar.addWidget(self.btn_connect)
         top_bar.addWidget(self.btn_set_center)
+        
         top_bar.addStretch()
-
+        
         main_layout.addLayout(top_bar)
+
+        # Separator line
+        line = QWidget()
+        line.setFixedHeight(1)
+        line.setStyleSheet("background-color: #555;")
+        main_layout.addWidget(line)
 
         # Main Content Area
         self.stacked_widget = QStackedWidget()
         
-        # Placeholder widgets for unimplemented modes
+        self.home_widget = HomeWidget()
         self.idle_widget = IdleModeWidget(self.serial_controller)
-        
         self.custom_widget = CustomModeWidget(self.serial_controller)
-        
         self.sim_widget = SimulationModeWidget()
         
+        self.stacked_widget.addWidget(self.home_widget)
         self.stacked_widget.addWidget(self.idle_widget)
         self.stacked_widget.addWidget(self.custom_widget)
         self.stacked_widget.addWidget(self.sim_widget)
         
-        # Default to Custom Mode for early testing
-        self.stacked_widget.setCurrentWidget(self.custom_widget)
+        self.stacked_widget.setCurrentWidget(self.home_widget)
+        self.btn_home.setEnabled(False)
         
         main_layout.addWidget(self.stacked_widget)
 
@@ -118,13 +171,19 @@ class MainWindow(QMainWindow):
         self.btn_connect.toggled.connect(self.toggle_connection)
         self.btn_set_center.clicked.connect(self.serial_controller.set_origin)
         
-        self.btn_custom.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.custom_widget))
-        self.btn_idle.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.idle_widget))
-        self.btn_sim.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.sim_widget))
+        # Navigation
+        self.btn_home.clicked.connect(lambda: self.switch_mode(self.home_widget))
+        self.home_widget.btn_idle.clicked.connect(lambda: self.switch_mode(self.idle_widget))
+        self.home_widget.btn_custom.clicked.connect(lambda: self.switch_mode(self.custom_widget))
+        self.home_widget.btn_sim.clicked.connect(lambda: self.switch_mode(self.sim_widget))
         
         self.serial_controller.connection_state_changed.connect(self.on_connection_changed)
         self.serial_controller.error_occurred.connect(self.on_serial_error)
         self.serial_controller.connection_lost.connect(self.on_serial_lost)
+
+    def switch_mode(self, widget):
+        self.stacked_widget.setCurrentWidget(widget)
+        self.btn_home.setEnabled(widget != self.home_widget)
 
     def toggle_connection(self, checked):
         if checked:
@@ -144,10 +203,10 @@ class MainWindow(QMainWindow):
         
         if is_connected:
             self.status_lbl.setText(f"Connected to {self.combo_ports.currentText()}")
-            self.status_lbl.setStyleSheet("color: green;")
+            self.status_lbl.setStyleSheet("color: #4CAF50;") # brighter green for dark mode
         else:
             self.status_lbl.setText("Disconnected")
-            self.status_lbl.setStyleSheet("color: red;")
+            self.status_lbl.setStyleSheet("color: #F44336;") # brighter red for dark mode
 
     def on_serial_error(self, err_msg):
         QMessageBox.warning(self, "Serial Error", err_msg)
