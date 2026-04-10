@@ -2,10 +2,30 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
                              QLabel, QFileDialog, QPlainTextEdit, QProgressBar, QMessageBox)
 from PySide6.QtCore import Qt
 
+from core.svg_parser import SVGParser
+from core.gcode_generator import GCodeGenerator
+from core.motion_planner import MotionPlanner
+
 class CustomModeWidget(QWidget):
     def __init__(self, serial_controller, parent=None):
         super().__init__(parent)
         self.serial_controller = serial_controller
+        
+        # Will be loaded with config from main window in real app
+        self.parser = SVGParser()
+        # We need config for generator and planner
+        import json
+        try:
+            with open("config/config.json", "r") as f:
+                self.config = json.load(f)
+        except Exception:
+            self.config = {}
+            
+        self.generator = GCodeGenerator(self.config)
+        self.planner = MotionPlanner(self.config)
+        
+        self.current_gcode = []
+        
         self.setup_ui()
         self.connect_signals()
 
@@ -72,28 +92,43 @@ class CustomModeWidget(QWidget):
         if file_path:
             self.lbl_file_name.setText(file_path.split('/')[-1])
             self.lbl_file_name.setStyleSheet("color: black;")
-            # To be implemented in Phase 2
-            self.log_view.appendPlainText(f"Loaded: {file_path}")
             
-            # Temporary manual G-code test since Phase 2 isn't done
-            self.test_gcode = [
-                "G1 X10 Y10 F2000",
-                "G1 X10 Y-10 F2000",
-                "G1 X-10 Y-10 F2000",
-                "G1 X-10 Y10 F2000",
-                "G1 X10 Y10 F2000"
-            ]
-            self.btn_draw.setEnabled(self.serial_controller.is_connected())
+            try:
+                paths = self.parser.parse_file(file_path)
+                if paths:
+                    self.current_gcode = self.generator.generate(paths)
+                    
+                    # Compute end position to return to center
+                    if self.current_gcode:
+                        last_line = self.current_gcode[-1]
+                        import re
+                        m_x = re.search(r'X([-0-9.]+)', last_line)
+                        m_y = re.search(r'Y([-0-9.]+)', last_line)
+                        
+                        curr_x, curr_y = 0.0, 0.0
+                        if m_x and m_y:
+                            curr_x = float(m_x.group(1))
+                            curr_y = float(m_y.group(1))
+                            
+                        return_moves = self.planner.plan_return_to_center(curr_x, curr_y)
+                        self.current_gcode.extend(return_moves)
+                    
+                    self.log_view.appendPlainText(f"Loaded: {file_path} ({len(self.current_gcode)} instructions)")
+                    self.btn_draw.setEnabled(self.serial_controller.is_connected())
+                else:
+                    self.log_view.appendPlainText(f"Error: No paths found in {file_path}")
+            except Exception as e:
+                self.log_view.appendPlainText(f"Parse error: {str(e)}")
 
     def start_drawing(self):
-        if not hasattr(self, 'test_gcode'):
+        if not self.current_gcode:
             return
             
         self.btn_draw.setEnabled(False)
         self.btn_stop.setEnabled(True)
         self.progress_bar.setRange(0, 0) # Indeterminate for now
         self.log_view.appendPlainText("--- Starting Draw ---")
-        self.serial_controller.stream_gcode(self.test_gcode)
+        self.serial_controller.stream_gcode(self.current_gcode)
 
     def stop_drawing(self):
         self.serial_controller.soft_reset()
@@ -108,13 +143,13 @@ class CustomModeWidget(QWidget):
         self.progress_bar.setRange(0, 100)
         self.progress_bar.setValue(0)
         self.btn_stop.setEnabled(False)
-        self.btn_draw.setEnabled(self.serial_controller.is_connected() and hasattr(self, 'test_gcode'))
+        self.btn_draw.setEnabled(self.serial_controller.is_connected() and len(self.current_gcode) > 0)
         
     def on_connection_changed(self, is_connected):
         if not is_connected:
             self.btn_draw.setEnabled(False)
             self.btn_stop.setEnabled(False)
-        elif hasattr(self, 'test_gcode'):
+        elif len(self.current_gcode) > 0:
             self.btn_draw.setEnabled(True)
 
     def log_sent(self, msg):
