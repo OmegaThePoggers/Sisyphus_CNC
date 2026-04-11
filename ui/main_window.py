@@ -59,10 +59,16 @@ class HomeWidget(QWidget):
         grid.addWidget(self.btn_custom, 0, 1)
         grid.addWidget(self.btn_sim, 0, 2)
         
+        self.btn_test_limits = QPushButton("Test Limits (Trace Canvas)")
+        self.btn_test_limits.setStyleSheet("font-size: 14px; padding: 10px; color: #ffaa00;")
+        self.btn_test_limits.setFixedWidth(200)
+        
         layout.addStretch()
         layout.addWidget(lbl_title)
         layout.addWidget(lbl_sub)
         layout.addLayout(grid)
+        layout.addSpacing(20)
+        layout.addWidget(self.btn_test_limits, alignment=Qt.AlignCenter)
         layout.addStretch()
 
 class MainWindow(QMainWindow):
@@ -177,6 +183,7 @@ class MainWindow(QMainWindow):
         self.home_widget.btn_idle.clicked.connect(lambda: self.switch_mode(self.idle_widget))
         self.home_widget.btn_custom.clicked.connect(lambda: self.switch_mode(self.custom_widget))
         self.home_widget.btn_sim.clicked.connect(lambda: self.switch_mode(self.sim_widget))
+        self.home_widget.btn_test_limits.clicked.connect(self.test_limits)
         
         self.serial_controller.connection_state_changed.connect(self.on_connection_changed)
         self.serial_controller.error_occurred.connect(self.on_serial_error)
@@ -214,3 +221,30 @@ class MainWindow(QMainWindow):
         
     def on_serial_lost(self):
         QMessageBox.critical(self, "Connection Lost", "The connection to the hardware was lost.")
+
+    def test_limits(self):
+        if not self.serial_controller.is_connected():
+            QMessageBox.warning(self, "Not Connected", "Please connect to the serial port first.")
+            return
+            
+        ws = self.config.get("workspace", {})
+        width = ws.get("width", 210)
+        height = ws.get("height", 148.5)
+        margin = ws.get("margin", 10)
+        feed_rate = self.config.get("feed_rate", 2000)
+        
+        max_x = (width / 2.0) - margin
+        max_y = (height / 2.0) - margin
+        
+        # Bounding box G-code
+        gcode = [
+            f"G1 X0.000 Y0.000 F{feed_rate}",
+            f"G1 X{max_x:.3f} Y0.000",
+            f"G1 X{max_x:.3f} Y{max_y:.3f}",
+            f"G1 X-{max_x:.3f} Y{max_y:.3f}",
+            f"G1 X-{max_x:.3f} Y-{max_y:.3f}",
+            f"G1 X{max_x:.3f} Y-{max_y:.3f}",
+            f"G1 X0.000 Y0.000"
+        ]
+        
+        self.serial_controller.stream_gcode(gcode)
