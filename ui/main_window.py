@@ -223,10 +223,6 @@ class MainWindow(QMainWindow):
         QMessageBox.critical(self, "Connection Lost", "The connection to the hardware was lost.")
 
     def test_limits(self):
-        if not self.serial_controller.is_connected():
-            QMessageBox.warning(self, "Not Connected", "Please connect to the serial port first.")
-            return
-            
         ws = self.config.get("workspace", {})
         width = ws.get("width", 210)
         height = ws.get("height", 148.5)
@@ -247,4 +243,11 @@ class MainWindow(QMainWindow):
             f"G1 X0.000 Y0.000"
         ]
         
-        self.serial_controller.stream_gcode(gcode)
+        # Load into simulation for visual feedback
+        self.sim_widget._load_from_gcode_lines(gcode)
+        self.sim_widget.lbl_file_name.setText("Hardware Bounds Test")
+        self.switch_mode(self.sim_widget)
+        
+        # Execute on hardware if connected
+        if self.serial_controller.is_connected():
+            self.serial_controller.stream_gcode(gcode)
