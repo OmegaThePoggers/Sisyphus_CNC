@@ -1,0 +1,21 @@
+{
+  "main.py": 1775897098.59811,
+  "core\\gcode_generator.py": 1775897098.5928051,
+  "core\\motion_planner.py": 1775897098.5937936,
+  "core\\resampler.py": 1775897098.5947957,
+  "core\\svg_parser.py": 1775897098.595795,
+  "core\\__init__.py": 1775897098.5928051,
+  "hardware\\serial_controller.py": 1775981321.292261,
+  "hardware\\__init__.py": 1775897098.595795,
+  "simulation\\animator.py": 1775897098.5991087,
+  "simulation\\renderer.py": 1775897098.6006186,
+  "simulation\\__init__.py": 1775897098.5991087,
+  "tests\\__init__.py": 1775897098.601629,
+  "ui\\custom_mode.py": 1775981321.2932622,
+  "ui\\idle_mode.py": 1775981321.2942636,
+  "ui\\main_window.py": 1775890509.954286,
+  "ui\\simulation_mode.py": 1775897098.6076636,
+  "ui\\__init__.py": 1775897098.6036282,
+  "PRD.md": 1775897098.5902522,
+  "README.md": 1775897098.5912955
+}

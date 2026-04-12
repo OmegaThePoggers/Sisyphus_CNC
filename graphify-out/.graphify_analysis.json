@@ -1,0 +1,341 @@
+{
+  "communities": {
+    "0": [
+      "core_resampler_py",
+      "idle_mode_idlemodewidget",
+      "idle_mode_idlemodewidget_add_file",
+      "idle_mode_idlemodewidget_add_folder",
+      "idle_mode_idlemodewidget_connect_signals",
+      "idle_mode_idlemodewidget_get_playlist_paths",
+      "idle_mode_idlemodewidget_init",
+      "idle_mode_idlemodewidget_on_connection_changed",
+      "idle_mode_idlemodewidget_on_error",
+      "idle_mode_idlemodewidget_on_finished",
+      "idle_mode_idlemodewidget_on_pattern_started",
+      "idle_mode_idlemodewidget_on_progress",
+      "idle_mode_idlemodewidget_remove_item",
+      "idle_mode_idlemodewidget_setup_ui",
+      "idle_mode_idlemodewidget_start_playlist",
+      "idle_mode_idlemodewidget_stop_playlist",
+      "idle_mode_idlemodewidget_toggle_pause",
+      "idle_mode_idlemodewidget_update_ui_state",
+      "idle_mode_playlistworker",
+      "idle_mode_playlistworker_get_end_pos",
+      "idle_mode_playlistworker_init",
+      "idle_mode_playlistworker_run",
+      "idle_mode_playlistworker_set_playlist",
+      "idle_mode_playlistworker_stop",
+      "resampler_interpolate_paths",
+      "resampler_pathresampler",
+      "resampler_resample_path",
+      "ui_idle_mode_py"
+    ],
+    "1": [
+      "hardware_serial_controller_py",
+      "qthread",
+      "serial_controller_auto_detect_port",
+      "serial_controller_get_available_ports",
+      "serial_controller_handle_connection_lost",
+      "serial_controller_handle_error",
+      "serial_controller_serialcontroller",
+      "serial_controller_serialcontroller_connect_to_device",
+      "serial_controller_serialcontroller_disconnect_device",
+      "serial_controller_serialcontroller_init",
+      "serial_controller_serialcontroller_is_connected",
+      "serial_controller_serialcontroller_pause_stream",
+      "serial_controller_serialcontroller_resume_stream",
+      "serial_controller_serialcontroller_send_line",
+      "serial_controller_serialcontroller_set_origin",
+      "serial_controller_serialcontroller_soft_reset",
+      "serial_controller_serialcontroller_stop_and_return_to_center",
+      "serial_controller_serialcontroller_stream_gcode",
+      "serial_controller_serialworker",
+      "serial_controller_serialworker_clear_queue",
+      "serial_controller_serialworker_enqueue_command",
+      "serial_controller_serialworker_init",
+      "serial_controller_serialworker_run",
+      "serial_controller_serialworker_set_paused",
+      "serial_controller_serialworker_stop",
+      "serial_controller_worker_finished"
+    ],
+    "2": [
+      "main_window_homewidget",
+      "main_window_homewidget_init",
+      "main_window_mainwindow",
+      "main_window_mainwindow_connect_signals",
+      "main_window_mainwindow_init",
+      "main_window_mainwindow_load_config",
+      "main_window_mainwindow_on_connection_changed",
+      "main_window_mainwindow_on_serial_error",
+      "main_window_mainwindow_on_serial_lost",
+      "main_window_mainwindow_refresh_ports",
+      "main_window_mainwindow_setup_ui",
+      "main_window_mainwindow_switch_mode",
+      "main_window_mainwindow_test_limits",
+      "main_window_mainwindow_toggle_connection",
+      "qmainwindow",
+      "qwidget",
+      "ui_main_window_py"
+    ],
+    "3": [
+      "core_gcode_generator_py",
+      "gcode_generator_gcodegenerator",
+      "gcode_generator_gcodegenerator_generate",
+      "gcode_generator_gcodegenerator_init",
+      "simulation_mode_simulationmodewidget",
+      "simulation_mode_simulationmodewidget_connect_signals",
+      "simulation_mode_simulationmodewidget_init",
+      "simulation_mode_simulationmodewidget_load_from_gcode_lines",
+      "simulation_mode_simulationmodewidget_load_gcode",
+      "simulation_mode_simulationmodewidget_load_svg",
+      "simulation_mode_simulationmodewidget_on_animation_finished",
+      "simulation_mode_simulationmodewidget_on_speed_changed",
+      "simulation_mode_simulationmodewidget_on_trail_toggled",
+      "simulation_mode_simulationmodewidget_setup_ui",
+      "ui_simulation_mode_py"
+    ],
+    "4": [
+      "custom_mode_custommodewidget",
+      "custom_mode_custommodewidget_connect_signals",
+      "custom_mode_custommodewidget_init",
+      "custom_mode_custommodewidget_load_svg",
+      "custom_mode_custommodewidget_log_received",
+      "custom_mode_custommodewidget_log_sent",
+      "custom_mode_custommodewidget_on_connection_changed",
+      "custom_mode_custommodewidget_on_stream_finished",
+      "custom_mode_custommodewidget_reset_ui_state",
+      "custom_mode_custommodewidget_setup_ui",
+      "custom_mode_custommodewidget_start_drawing",
+      "custom_mode_custommodewidget_stop_drawing",
+      "ui_custom_mode_py"
+    ],
+    "5": [
+      "animator_simulationanimator",
+      "animator_simulationanimator_init",
+      "animator_simulationanimator_load_path",
+      "animator_simulationanimator_pause",
+      "animator_simulationanimator_play",
+      "animator_simulationanimator_reset",
+      "animator_simulationanimator_set_speed",
+      "animator_simulationanimator_step",
+      "animator_simulationanimator_stop",
+      "qobject",
+      "simulation_animator_py"
+    ],
+    "6": [
+      "renderer_rationale_20",
+      "renderer_simulationrenderer",
+      "renderer_simulationrenderer_init",
+      "renderer_simulationrenderer_paintevent",
+      "renderer_simulationrenderer_set_path",
+      "renderer_simulationrenderer_update_position",
+      "simulation_renderer_py"
+    ],
+    "7": [
+      "core_motion_planner_py",
+      "motion_planner_motionplanner",
+      "motion_planner_motionplanner_init",
+      "motion_planner_motionplanner_plan_return_to_center",
+      "motion_planner_rationale_13",
+      "serial_controller_rationale_191"
+    ],
+    "8": [
+      "core_svg_parser_py",
+      "svg_parser_rationale_21",
+      "svg_parser_svgparser",
+      "svg_parser_svgparser_init",
+      "svg_parser_svgparser_parse_file",
+      "svg_parser_svgparser_process_path"
+    ],
+    "9": [
+      "main_main",
+      "main_py"
+    ],
+    "10": [
+      "resampler_rationale_6"
+    ],
+    "11": [
+      "resampler_rationale_32"
+    ],
+    "12": [
+      "core_init_py"
+    ],
+    "13": [
+      "hardware_init_py"
+    ],
+    "14": [
+      "simulation_init_py"
+    ],
+    "15": [
+      "tests_init_py"
+    ],
+    "16": [
+      "ui_init_py"
+    ]
+  },
+  "cohesion": {
+    "0": 0.11,
+    "1": 0.14,
+    "2": 0.18,
+    "3": 0.17,
+    "4": 0.21,
+    "5": 0.27,
+    "6": 0.29,
+    "7": 0.33,
+    "8": 0.4,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0
+  },
+  "gods": [
+    {
+      "id": "idle_mode_idlemodewidget",
+      "label": "IdleModeWidget",
+      "edges": 24
+    },
+    {
+      "id": "custom_mode_custommodewidget",
+      "label": "CustomModeWidget",
+      "edges": 18
+    },
+    {
+      "id": "main_window_mainwindow",
+      "label": "MainWindow",
+      "edges": 17
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget",
+      "label": "SimulationModeWidget",
+      "edges": 17
+    },
+    {
+      "id": "serial_controller_serialcontroller",
+      "label": "SerialController",
+      "edges": 16
+    },
+    {
+      "id": "idle_mode_playlistworker",
+      "label": "PlaylistWorker",
+      "edges": 12
+    },
+    {
+      "id": "animator_simulationanimator",
+      "label": "SimulationAnimator",
+      "edges": 11
+    },
+    {
+      "id": "serial_controller_serialworker",
+      "label": "SerialWorker",
+      "edges": 10
+    },
+    {
+      "id": "motion_planner_motionplanner",
+      "label": "MotionPlanner",
+      "edges": 9
+    },
+    {
+      "id": "svg_parser_svgparser",
+      "label": "SVGParser",
+      "edges": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "CustomModeWidget",
+      "target": "GCodeGenerator",
+      "source_files": [
+        "ui\\custom_mode.py",
+        "core\\gcode_generator.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "PlaylistWorker",
+      "target": "GCodeGenerator",
+      "source_files": [
+        "ui\\idle_mode.py",
+        "core\\gcode_generator.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "IdleModeWidget",
+      "target": "GCodeGenerator",
+      "source_files": [
+        "ui\\idle_mode.py",
+        "core\\gcode_generator.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "SerialWorker",
+      "target": "MotionPlanner",
+      "source_files": [
+        "hardware\\serial_controller.py",
+        "core\\motion_planner.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "SerialController",
+      "target": "MotionPlanner",
+      "source_files": [
+        "hardware\\serial_controller.py",
+        "core\\motion_planner.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `IdleModeWidget` connect `Community 0` to `Community 8`, `Community 2`, `Community 3`, `Community 7`?",
+      "why": "High betweenness centrality (0.273) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `SimulationModeWidget` connect `Community 3` to `Community 8`, `Community 2`, `Community 5`, `Community 6`?",
+      "why": "High betweenness centrality (0.259) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `SerialController` connect `Community 1` to `Community 2`, `Community 5`, `Community 7`?",
+      "why": "High betweenness centrality (0.231) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 6 inferred relationships involving `IdleModeWidget` (e.g. with `SVGParser` and `GCodeGenerator`) actually correct?",
+      "why": "`IdleModeWidget` has 6 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 5 inferred relationships involving `CustomModeWidget` (e.g. with `SVGParser` and `GCodeGenerator`) actually correct?",
+      "why": "`CustomModeWidget` has 5 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 4 inferred relationships involving `MainWindow` (e.g. with `SerialController` and `CustomModeWidget`) actually correct?",
+      "why": "`MainWindow` has 4 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 6 inferred relationships involving `SimulationModeWidget` (e.g. with `HomeWidget` and `MainWindow`) actually correct?",
+      "why": "`SimulationModeWidget` has 6 INFERRED edges - model-reasoned connections that need verification."
+    }
+  ]
+}

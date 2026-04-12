@@ -1,0 +1,3108 @@
+{
+  "nodes": [
+    {
+      "id": "main_py",
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "main_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main.py",
+      "source_location": "L7"
+    },
+    {
+      "id": "core_gcode_generator_py",
+      "label": "gcode_generator.py",
+      "file_type": "code",
+      "source_file": "core\\gcode_generator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "gcode_generator_gcodegenerator",
+      "label": "GCodeGenerator",
+      "file_type": "code",
+      "source_file": "core\\gcode_generator.py",
+      "source_location": "L3"
+    },
+    {
+      "id": "gcode_generator_gcodegenerator_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "core\\gcode_generator.py",
+      "source_location": "L4"
+    },
+    {
+      "id": "gcode_generator_gcodegenerator_generate",
+      "label": ".generate()",
+      "file_type": "code",
+      "source_file": "core\\gcode_generator.py",
+      "source_location": "L16"
+    },
+    {
+      "id": "core_motion_planner_py",
+      "label": "motion_planner.py",
+      "file_type": "code",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "motion_planner_motionplanner",
+      "label": "MotionPlanner",
+      "file_type": "code",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L4"
+    },
+    {
+      "id": "motion_planner_motionplanner_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L5"
+    },
+    {
+      "id": "motion_planner_motionplanner_plan_return_to_center",
+      "label": ".plan_return_to_center()",
+      "file_type": "code",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "motion_planner_rationale_13",
+      "label": "Generates a smooth inward spiral back to (0,0).         Creates a visible spira",
+      "file_type": "rationale",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "core_resampler_py",
+      "label": "resampler.py",
+      "file_type": "code",
+      "source_file": "core\\resampler.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "resampler_pathresampler",
+      "label": "PathResampler",
+      "file_type": "code",
+      "source_file": "core\\resampler.py",
+      "source_location": "L3"
+    },
+    {
+      "id": "resampler_resample_path",
+      "label": "resample_path()",
+      "file_type": "code",
+      "source_file": "core\\resampler.py",
+      "source_location": "L5"
+    },
+    {
+      "id": "resampler_interpolate_paths",
+      "label": "interpolate_paths()",
+      "file_type": "code",
+      "source_file": "core\\resampler.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "resampler_rationale_6",
+      "label": "Resample a single continuous polyline into `num_points` evenly spaced points.",
+      "file_type": "rationale",
+      "source_file": "core\\resampler.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "resampler_rationale_32",
+      "label": "Interpolates between two paths (assumed to have the same number of points).",
+      "file_type": "rationale",
+      "source_file": "core\\resampler.py",
+      "source_location": "L32"
+    },
+    {
+      "id": "core_svg_parser_py",
+      "label": "svg_parser.py",
+      "file_type": "code",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "svg_parser_svgparser",
+      "label": "SVGParser",
+      "file_type": "code",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L4"
+    },
+    {
+      "id": "svg_parser_svgparser_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L5"
+    },
+    {
+      "id": "svg_parser_svgparser_parse_file",
+      "label": ".parse_file()",
+      "file_type": "code",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L9"
+    },
+    {
+      "id": "svg_parser_svgparser_process_path",
+      "label": "._process_path()",
+      "file_type": "code",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "svg_parser_rationale_21",
+      "label": "Convert svgpathtools Path into a list of (x,y) coordinates.         Continuous",
+      "file_type": "rationale",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "core_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "core\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "hardware_serial_controller_py",
+      "label": "serial_controller.py",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "serial_controller_serialworker",
+      "label": "SerialWorker",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "qthread",
+      "label": "QThread",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "serial_controller_serialworker_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "serial_controller_serialworker_run",
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "serial_controller_serialworker_enqueue_command",
+      "label": ".enqueue_command()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L93"
+    },
+    {
+      "id": "serial_controller_serialworker_clear_queue",
+      "label": ".clear_queue()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L97"
+    },
+    {
+      "id": "serial_controller_serialworker_set_paused",
+      "label": ".set_paused()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L101"
+    },
+    {
+      "id": "serial_controller_serialworker_stop",
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L105"
+    },
+    {
+      "id": "serial_controller_serialcontroller",
+      "label": "SerialController",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L109"
+    },
+    {
+      "id": "qobject",
+      "label": "QObject",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "serial_controller_serialcontroller_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L118"
+    },
+    {
+      "id": "serial_controller_get_available_ports",
+      "label": "get_available_ports()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "serial_controller_auto_detect_port",
+      "label": "auto_detect_port()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "serial_controller_serialcontroller_connect_to_device",
+      "label": ".connect_to_device()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L140"
+    },
+    {
+      "id": "serial_controller_serialcontroller_disconnect_device",
+      "label": ".disconnect_device()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L157"
+    },
+    {
+      "id": "serial_controller_serialcontroller_is_connected",
+      "label": ".is_connected()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L164"
+    },
+    {
+      "id": "serial_controller_serialcontroller_send_line",
+      "label": ".send_line()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L167"
+    },
+    {
+      "id": "serial_controller_serialcontroller_stream_gcode",
+      "label": ".stream_gcode()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L171"
+    },
+    {
+      "id": "serial_controller_serialcontroller_pause_stream",
+      "label": ".pause_stream()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L177"
+    },
+    {
+      "id": "serial_controller_serialcontroller_resume_stream",
+      "label": ".resume_stream()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L181"
+    },
+    {
+      "id": "serial_controller_serialcontroller_soft_reset",
+      "label": ".soft_reset()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L185"
+    },
+    {
+      "id": "serial_controller_serialcontroller_stop_and_return_to_center",
+      "label": ".stop_and_return_to_center()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L190"
+    },
+    {
+      "id": "serial_controller_serialcontroller_set_origin",
+      "label": ".set_origin()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L204"
+    },
+    {
+      "id": "serial_controller_handle_error",
+      "label": "_handle_error()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L208"
+    },
+    {
+      "id": "serial_controller_handle_connection_lost",
+      "label": "_handle_connection_lost()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L214"
+    },
+    {
+      "id": "serial_controller_worker_finished",
+      "label": "_worker_finished()",
+      "file_type": "code",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L219"
+    },
+    {
+      "id": "serial_controller_rationale_191",
+      "label": "Clear current queue and spiral back to center.",
+      "file_type": "rationale",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L191"
+    },
+    {
+      "id": "hardware_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "hardware\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "simulation_animator_py",
+      "label": "animator.py",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "animator_simulationanimator",
+      "label": "SimulationAnimator",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L4"
+    },
+    {
+      "id": "animator_simulationanimator_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "animator_simulationanimator_load_path",
+      "label": ".load_path()",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "animator_simulationanimator_reset",
+      "label": ".reset()",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "animator_simulationanimator_play",
+      "label": ".play()",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L39"
+    },
+    {
+      "id": "animator_simulationanimator_pause",
+      "label": ".pause()",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "animator_simulationanimator_stop",
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L48"
+    },
+    {
+      "id": "animator_simulationanimator_set_speed",
+      "label": ".set_speed()",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L51"
+    },
+    {
+      "id": "animator_simulationanimator_step",
+      "label": "._step()",
+      "file_type": "code",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L54"
+    },
+    {
+      "id": "simulation_renderer_py",
+      "label": "renderer.py",
+      "file_type": "code",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "renderer_simulationrenderer",
+      "label": "SimulationRenderer",
+      "file_type": "code",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L6"
+    },
+    {
+      "id": "qwidget",
+      "label": "QWidget",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "renderer_simulationrenderer_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L7"
+    },
+    {
+      "id": "renderer_simulationrenderer_set_path",
+      "label": ".set_path()",
+      "file_type": "code",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L19"
+    },
+    {
+      "id": "renderer_simulationrenderer_update_position",
+      "label": ".update_position()",
+      "file_type": "code",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L26"
+    },
+    {
+      "id": "renderer_simulationrenderer_paintevent",
+      "label": ".paintEvent()",
+      "file_type": "code",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "renderer_rationale_20",
+      "label": "points is a list of (x,y) tuples representing the GCode path",
+      "file_type": "rationale",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "simulation_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "simulation\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "tests\\__init__.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ui_custom_mode_py",
+      "label": "custom_mode.py",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "custom_mode_custommodewidget",
+      "label": "CustomModeWidget",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L9"
+    },
+    {
+      "id": "custom_mode_custommodewidget_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L10"
+    },
+    {
+      "id": "custom_mode_custommodewidget_setup_ui",
+      "label": ".setup_ui()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L32"
+    },
+    {
+      "id": "custom_mode_custommodewidget_connect_signals",
+      "label": ".connect_signals()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L80"
+    },
+    {
+      "id": "custom_mode_custommodewidget_load_svg",
+      "label": ".load_svg()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L90"
+    },
+    {
+      "id": "custom_mode_custommodewidget_start_drawing",
+      "label": ".start_drawing()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "custom_mode_custommodewidget_stop_drawing",
+      "label": ".stop_drawing()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L133"
+    },
+    {
+      "id": "custom_mode_custommodewidget_on_stream_finished",
+      "label": ".on_stream_finished()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L138"
+    },
+    {
+      "id": "custom_mode_custommodewidget_reset_ui_state",
+      "label": ".reset_ui_state()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L142"
+    },
+    {
+      "id": "custom_mode_custommodewidget_on_connection_changed",
+      "label": ".on_connection_changed()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L148"
+    },
+    {
+      "id": "custom_mode_custommodewidget_log_sent",
+      "label": ".log_sent()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L155"
+    },
+    {
+      "id": "custom_mode_custommodewidget_log_received",
+      "label": ".log_received()",
+      "file_type": "code",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L158"
+    },
+    {
+      "id": "ui_idle_mode_py",
+      "label": "idle_mode.py",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "idle_mode_playlistworker",
+      "label": "PlaylistWorker",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L15"
+    },
+    {
+      "id": "idle_mode_playlistworker_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "idle_mode_playlistworker_set_playlist",
+      "label": ".set_playlist()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "idle_mode_playlistworker_run",
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "idle_mode_playlistworker_get_end_pos",
+      "label": "._get_end_pos()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L121"
+    },
+    {
+      "id": "idle_mode_playlistworker_stop",
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L131"
+    },
+    {
+      "id": "idle_mode_idlemodewidget",
+      "label": "IdleModeWidget",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L134"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L135"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_setup_ui",
+      "label": ".setup_ui()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L150"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_connect_signals",
+      "label": ".connect_signals()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L201"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_add_file",
+      "label": ".add_file()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L217"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_add_folder",
+      "label": ".add_folder()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L225"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_remove_item",
+      "label": ".remove_item()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L237"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_get_playlist_paths",
+      "label": ".get_playlist_paths()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L242"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_start_playlist",
+      "label": ".start_playlist()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L245"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_toggle_pause",
+      "label": ".toggle_pause()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L259"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_stop_playlist",
+      "label": ".stop_playlist()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L269"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_on_progress",
+      "label": ".on_progress()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L273"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_on_pattern_started",
+      "label": ".on_pattern_started()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L277"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_on_finished",
+      "label": ".on_finished()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L280"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_on_error",
+      "label": ".on_error()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L288"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_update_ui_state",
+      "label": ".update_ui_state()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L292"
+    },
+    {
+      "id": "idle_mode_idlemodewidget_on_connection_changed",
+      "label": ".on_connection_changed()",
+      "file_type": "code",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L297"
+    },
+    {
+      "id": "ui_main_window_py",
+      "label": "main_window.py",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "main_window_homewidget",
+      "label": "HomeWidget",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "main_window_homewidget_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "main_window_mainwindow",
+      "label": "MainWindow",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L74"
+    },
+    {
+      "id": "qmainwindow",
+      "label": "QMainWindow",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "main_window_mainwindow_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L75"
+    },
+    {
+      "id": "main_window_mainwindow_load_config",
+      "label": ".load_config()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L85"
+    },
+    {
+      "id": "main_window_mainwindow_setup_ui",
+      "label": ".setup_ui()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L93"
+    },
+    {
+      "id": "main_window_mainwindow_refresh_ports",
+      "label": ".refresh_ports()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L155"
+    },
+    {
+      "id": "main_window_mainwindow_connect_signals",
+      "label": ".connect_signals()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L177"
+    },
+    {
+      "id": "main_window_mainwindow_switch_mode",
+      "label": ".switch_mode()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L192"
+    },
+    {
+      "id": "main_window_mainwindow_toggle_connection",
+      "label": ".toggle_connection()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L196"
+    },
+    {
+      "id": "main_window_mainwindow_on_connection_changed",
+      "label": ".on_connection_changed()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L206"
+    },
+    {
+      "id": "main_window_mainwindow_on_serial_error",
+      "label": ".on_serial_error()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L219"
+    },
+    {
+      "id": "main_window_mainwindow_on_serial_lost",
+      "label": ".on_serial_lost()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L222"
+    },
+    {
+      "id": "main_window_mainwindow_test_limits",
+      "label": ".test_limits()",
+      "file_type": "code",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L225"
+    },
+    {
+      "id": "ui_simulation_mode_py",
+      "label": "simulation_mode.py",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget",
+      "label": "SimulationModeWidget",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L11"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_setup_ui",
+      "label": ".setup_ui()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_connect_signals",
+      "label": ".connect_signals()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L80"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_load_gcode",
+      "label": ".load_gcode()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L93"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_load_svg",
+      "label": ".load_svg()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L106"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_load_from_gcode_lines",
+      "label": "._load_from_gcode_lines()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_on_speed_changed",
+      "label": ".on_speed_changed()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L150"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_on_trail_toggled",
+      "label": ".on_trail_toggled()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L155"
+    },
+    {
+      "id": "simulation_mode_simulationmodewidget_on_animation_finished",
+      "label": ".on_animation_finished()",
+      "file_type": "code",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L159"
+    },
+    {
+      "id": "ui_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "ui\\__init__.py",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "main_py",
+      "target": "sys",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "pyside6_qtwidgets",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "pyside6_qtgui",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "pyside6_qtcore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "ui_main_window",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "main_py",
+      "target": "main_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "core_gcode_generator_py",
+      "target": "numpy",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\gcode_generator.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_gcode_generator_py",
+      "target": "gcode_generator_gcodegenerator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\gcode_generator.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "gcode_generator_gcodegenerator",
+      "target": "gcode_generator_gcodegenerator_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\gcode_generator.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "gcode_generator_gcodegenerator",
+      "target": "gcode_generator_gcodegenerator_generate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\gcode_generator.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "core_motion_planner_py",
+      "target": "math",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_motion_planner_py",
+      "target": "numpy",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "core_motion_planner_py",
+      "target": "motion_planner_motionplanner",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "motion_planner_motionplanner",
+      "target": "motion_planner_motionplanner_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "motion_planner_motionplanner",
+      "target": "motion_planner_motionplanner_plan_return_to_center",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "motion_planner_rationale_13",
+      "target": "motion_planner_motionplanner_plan_return_to_center",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\motion_planner.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "core_resampler_py",
+      "target": "numpy",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\resampler.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_resampler_py",
+      "target": "resampler_pathresampler",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\resampler.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "core_resampler_py",
+      "target": "resampler_resample_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\resampler.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "core_resampler_py",
+      "target": "resampler_interpolate_paths",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\resampler.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "resampler_rationale_6",
+      "target": "resampler_pathresampler_resample_path",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\resampler.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "resampler_rationale_32",
+      "target": "resampler_pathresampler_interpolate_paths",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\resampler.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "core_svg_parser_py",
+      "target": "svgpathtools",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "core_svg_parser_py",
+      "target": "numpy",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "core_svg_parser_py",
+      "target": "svg_parser_svgparser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "svg_parser_svgparser",
+      "target": "svg_parser_svgparser_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "svg_parser_svgparser",
+      "target": "svg_parser_svgparser_parse_file",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "svg_parser_svgparser",
+      "target": "svg_parser_svgparser_process_path",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "svg_parser_svgparser_parse_file",
+      "target": "svg_parser_svgparser_process_path",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "svg_parser_rationale_21",
+      "target": "svg_parser_svgparser_process_path",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "core\\svg_parser.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial_tools_list_ports",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "time",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "pyside6_qtcore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial_controller_serialworker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialworker",
+      "target": "qthread",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialworker",
+      "target": "serial_controller_serialworker_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialworker",
+      "target": "serial_controller_serialworker_run",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialworker",
+      "target": "serial_controller_serialworker_enqueue_command",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialworker",
+      "target": "serial_controller_serialworker_clear_queue",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialworker",
+      "target": "serial_controller_serialworker_set_paused",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialworker",
+      "target": "serial_controller_serialworker_stop",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial_controller_serialcontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "qobject",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial_controller_get_available_ports",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial_controller_auto_detect_port",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_connect_to_device",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_disconnect_device",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_is_connected",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_send_line",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_stream_gcode",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_pause_stream",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L177",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_resume_stream",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_soft_reset",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_stop_and_return_to_center",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L190",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller",
+      "target": "serial_controller_serialcontroller_set_origin",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial_controller_handle_error",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial_controller_handle_connection_lost",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L214",
+      "weight": 1.0
+    },
+    {
+      "source": "hardware_serial_controller_py",
+      "target": "serial_controller_worker_finished",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialworker_init",
+      "target": "serial_controller_serialcontroller_init",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_auto_detect_port",
+      "target": "serial_controller_get_available_ports",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_connect_to_device",
+      "target": "serial_controller_serialworker",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_disconnect_device",
+      "target": "serial_controller_serialworker_stop",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_send_line",
+      "target": "serial_controller_serialcontroller_is_connected",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_send_line",
+      "target": "serial_controller_serialworker_enqueue_command",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_stream_gcode",
+      "target": "serial_controller_serialcontroller_is_connected",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_stream_gcode",
+      "target": "serial_controller_serialworker_clear_queue",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_stream_gcode",
+      "target": "serial_controller_serialworker_enqueue_command",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_pause_stream",
+      "target": "serial_controller_serialcontroller_is_connected",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L178",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_pause_stream",
+      "target": "serial_controller_serialworker_set_paused",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_resume_stream",
+      "target": "serial_controller_serialcontroller_is_connected",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_resume_stream",
+      "target": "serial_controller_serialworker_set_paused",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_soft_reset",
+      "target": "serial_controller_serialcontroller_is_connected",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L186",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_soft_reset",
+      "target": "serial_controller_serialworker_clear_queue",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_soft_reset",
+      "target": "serial_controller_serialworker_enqueue_command",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L188",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_stop_and_return_to_center",
+      "target": "serial_controller_serialcontroller_is_connected",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_stop_and_return_to_center",
+      "target": "serial_controller_serialworker_clear_queue",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_stop_and_return_to_center",
+      "target": "serial_controller_serialworker_enqueue_command",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_serialcontroller_set_origin",
+      "target": "serial_controller_serialcontroller_send_line",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_handle_error",
+      "target": "serial_controller_serialworker_clear_queue",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L211",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_handle_connection_lost",
+      "target": "serial_controller_serialcontroller_disconnect_device",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "serial_controller_rationale_191",
+      "target": "serial_controller_serialcontroller_stop_and_return_to_center",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "hardware\\serial_controller.py",
+      "source_location": "L191",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_animator_py",
+      "target": "math",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_animator_py",
+      "target": "pyside6_qtcore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_animator_py",
+      "target": "animator_simulationanimator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "qobject",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "animator_simulationanimator_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "animator_simulationanimator_load_path",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "animator_simulationanimator_reset",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "animator_simulationanimator_play",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "animator_simulationanimator_pause",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "animator_simulationanimator_stop",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "animator_simulationanimator_set_speed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator",
+      "target": "animator_simulationanimator_step",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator_load_path",
+      "target": "animator_simulationanimator_reset",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator_reset",
+      "target": "animator_simulationanimator_stop",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator_play",
+      "target": "animator_simulationanimator_reset",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator_pause",
+      "target": "animator_simulationanimator_stop",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "animator_simulationanimator_step",
+      "target": "animator_simulationanimator_stop",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\animator.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_renderer_py",
+      "target": "math",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_renderer_py",
+      "target": "pyside6_qtwidgets",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_renderer_py",
+      "target": "pyside6_qtgui",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_renderer_py",
+      "target": "pyside6_qtcore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_renderer_py",
+      "target": "renderer_simulationrenderer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "renderer_simulationrenderer",
+      "target": "qwidget",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "renderer_simulationrenderer",
+      "target": "renderer_simulationrenderer_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "renderer_simulationrenderer",
+      "target": "renderer_simulationrenderer_set_path",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "renderer_simulationrenderer",
+      "target": "renderer_simulationrenderer_update_position",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "renderer_simulationrenderer",
+      "target": "renderer_simulationrenderer_paintevent",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "renderer_rationale_20",
+      "target": "renderer_simulationrenderer_set_path",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "simulation\\renderer.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_custom_mode_py",
+      "target": "pyside6_qtwidgets",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_custom_mode_py",
+      "target": "pyside6_qtcore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_custom_mode_py",
+      "target": "core_svg_parser",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_custom_mode_py",
+      "target": "core_gcode_generator",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_custom_mode_py",
+      "target": "core_motion_planner",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_custom_mode_py",
+      "target": "custom_mode_custommodewidget",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "qwidget",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_setup_ui",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_connect_signals",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_load_svg",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_start_drawing",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_stop_drawing",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_on_stream_finished",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_reset_ui_state",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_on_connection_changed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_log_sent",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget",
+      "target": "custom_mode_custommodewidget_log_received",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget_init",
+      "target": "custom_mode_custommodewidget_setup_ui",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget_init",
+      "target": "custom_mode_custommodewidget_connect_signals",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget_stop_drawing",
+      "target": "custom_mode_custommodewidget_reset_ui_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "custom_mode_custommodewidget_on_stream_finished",
+      "target": "custom_mode_custommodewidget_reset_ui_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\custom_mode.py",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "os",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "re",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "pyside6_qtwidgets",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "pyside6_qtcore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "core_svg_parser",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "core_gcode_generator",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "core_motion_planner",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "core_resampler",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "numpy",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "idle_mode_playlistworker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_playlistworker",
+      "target": "qthread",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_playlistworker",
+      "target": "idle_mode_playlistworker_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_playlistworker",
+      "target": "idle_mode_playlistworker_set_playlist",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_playlistworker",
+      "target": "idle_mode_playlistworker_run",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_playlistworker",
+      "target": "idle_mode_playlistworker_get_end_pos",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_playlistworker",
+      "target": "idle_mode_playlistworker_stop",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_idle_mode_py",
+      "target": "idle_mode_idlemodewidget",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "qwidget",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_setup_ui",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_connect_signals",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_add_file",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L217",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_add_folder",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L225",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_remove_item",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L237",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_get_playlist_paths",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L242",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_start_playlist",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_toggle_pause",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L259",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_stop_playlist",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L269",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_on_progress",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L273",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_on_pattern_started",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L277",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_on_finished",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L280",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_on_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L288",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_update_ui_state",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L292",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget",
+      "target": "idle_mode_idlemodewidget_on_connection_changed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_playlistworker_init",
+      "target": "idle_mode_idlemodewidget_init",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_playlistworker_run",
+      "target": "idle_mode_playlistworker_get_end_pos",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_init",
+      "target": "idle_mode_playlistworker",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_init",
+      "target": "idle_mode_idlemodewidget_setup_ui",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_init",
+      "target": "idle_mode_idlemodewidget_connect_signals",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_add_file",
+      "target": "idle_mode_idlemodewidget_update_ui_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_add_folder",
+      "target": "idle_mode_idlemodewidget_update_ui_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_remove_item",
+      "target": "idle_mode_idlemodewidget_update_ui_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L240",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_start_playlist",
+      "target": "idle_mode_idlemodewidget_get_playlist_paths",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_start_playlist",
+      "target": "idle_mode_playlistworker_set_playlist",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_stop_playlist",
+      "target": "idle_mode_playlistworker_stop",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L270",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_on_error",
+      "target": "idle_mode_idlemodewidget_stop_playlist",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_on_connection_changed",
+      "target": "idle_mode_idlemodewidget_update_ui_state",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L298",
+      "weight": 1.0
+    },
+    {
+      "source": "idle_mode_idlemodewidget_on_connection_changed",
+      "target": "idle_mode_idlemodewidget_stop_playlist",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\idle_mode.py",
+      "source_location": "L300",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "pyside6_qtwidgets",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "pyside6_qtcore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "hardware_serial_controller",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "ui_custom_mode",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "ui_simulation_mode",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "ui_idle_mode",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "main_window_homewidget",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_homewidget",
+      "target": "qwidget",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_homewidget",
+      "target": "main_window_homewidget_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_main_window_py",
+      "target": "main_window_mainwindow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "qmainwindow",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_load_config",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_setup_ui",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_refresh_ports",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_connect_signals",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L177",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_switch_mode",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_toggle_connection",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_on_connection_changed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_on_serial_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_on_serial_lost",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow",
+      "target": "main_window_mainwindow_test_limits",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L225",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_homewidget_init",
+      "target": "main_window_mainwindow_init",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow_init",
+      "target": "main_window_mainwindow_load_config",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow_init",
+      "target": "main_window_mainwindow_setup_ui",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow_init",
+      "target": "main_window_mainwindow_connect_signals",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow_setup_ui",
+      "target": "qwidget",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow_setup_ui",
+      "target": "main_window_mainwindow_refresh_ports",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow_setup_ui",
+      "target": "main_window_homewidget",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow_connect_signals",
+      "target": "main_window_mainwindow_switch_mode",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "main_window_mainwindow_test_limits",
+      "target": "main_window_mainwindow_switch_mode",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\main_window.py",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "json",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "re",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "pyside6_qtwidgets",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "pyside6_qtcore",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "simulation_renderer",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "simulation_animator",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "core_svg_parser",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "core_gcode_generator",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "ui_simulation_mode_py",
+      "target": "simulation_mode_simulationmodewidget",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "qwidget",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_setup_ui",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_connect_signals",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_load_gcode",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_load_svg",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_load_from_gcode_lines",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_on_speed_changed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_on_trail_toggled",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget",
+      "target": "simulation_mode_simulationmodewidget_on_animation_finished",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget_init",
+      "target": "simulation_mode_simulationmodewidget_setup_ui",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget_init",
+      "target": "simulation_mode_simulationmodewidget_connect_signals",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget_load_gcode",
+      "target": "simulation_mode_simulationmodewidget_load_from_gcode_lines",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "simulation_mode_simulationmodewidget_load_svg",
+      "target": "simulation_mode_simulationmodewidget_load_from_gcode_lines",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "ui\\simulation_mode.py",
+      "source_location": "L119",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
