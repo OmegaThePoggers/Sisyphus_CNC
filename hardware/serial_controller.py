@@ -207,9 +207,8 @@ class SerialController(QObject):
     @Slot(str)
     def _handle_error(self, err_msg):
         self.error_occurred.emit(err_msg)
-        # Assuming we don't automatically entirely disconnect on GRBL error, 
-        # but the queue is halted in the worker.
-        self.worker.clear_queue()
+        if self.worker:
+            self.worker.clear_queue()
 
     @Slot()
     def _handle_connection_lost(self):
