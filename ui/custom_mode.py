@@ -131,8 +131,8 @@ class CustomModeWidget(QWidget):
         self.serial_controller.stream_gcode(self.current_gcode)
 
     def stop_drawing(self):
-        self.serial_controller.soft_reset()
-        self.log_view.appendPlainText("--- Stopped ---")
+        self.serial_controller.stop_and_return_to_center(self.config)
+        self.log_view.appendPlainText("--- Stopped, returning to center ---")
         self.reset_ui_state()
 
     def on_stream_finished(self):

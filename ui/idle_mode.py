@@ -268,7 +268,7 @@ class IdleModeWidget(QWidget):
 
     def stop_playlist(self):
         self.worker.stop()
-        self.serial_controller.soft_reset()
+        self.serial_controller.stop_and_return_to_center(self.config)
         
     def on_progress(self, status, val):
         self.lbl_status.setText(status)

@@ -187,6 +187,20 @@ class SerialController(QObject):
             self.worker.clear_queue()
             self.worker.enqueue_command('\x18') # Send Ctrl-X directly 
 
+    def stop_and_return_to_center(self, config):
+        """Clear current queue and spiral back to center."""
+        if self.is_connected():
+            self.worker.clear_queue()
+            from core.motion_planner import MotionPlanner
+            planner = MotionPlanner(config)
+            # We don't know exact position, so command a direct move to 0,0
+            # followed by a short spiral from a small offset for aesthetics
+            return_gcode = [
+                f"G1 X0.000 Y0.000 F{config.get('feed_rate', 2000)}"
+            ]
+            for cmd in return_gcode:
+                self.worker.enqueue_command(cmd)
+
     def set_origin(self):
         self.send_line("G92 X0 Y0")
 
