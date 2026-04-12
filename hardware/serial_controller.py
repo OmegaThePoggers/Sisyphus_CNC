@@ -29,12 +29,11 @@ class SerialWorker(QThread):
             
             # Send initial reset (Ctrl-X)
             self.serial.write(b'\x18')
-            time.sleep(1)
+            time.sleep(1.5)
+            # Drain any welcome banner / startup messages
+            while self.serial.in_waiting:
+                self.serial.readline()
             self.serial.reset_input_buffer()
-            
-            # Send unlock ($X) and Absolute mode (G90) just in case
-            self._command_queue.insert(0, '$X')
-            self._command_queue.insert(1, 'G90')
 
         except serial.SerialException as e:
             self.error_occurred.emit(f"Connection failed: {e}")
@@ -52,27 +51,35 @@ class SerialWorker(QThread):
             
             if cmd:
                 try:
-                    # Clean and format command (Grbl accepts \n or \r\n, \r\n is safer)
-                    cmd_str = cmd.strip() + '\r\n'
+                    # Use \n only — some GRBL clones treat \r as a separate empty command
+                    cmd_str = cmd.strip() + '\n'
                     self.serial.write(cmd_str.encode('utf-8'))
                     self.line_sent.emit(cmd)
                     
-                    # Wait for explicitly "ok" or "error"
+                    # Wait for "ok" or "error"
                     while self._is_running:
                         line = self.serial.readline()
                         if not line:
                             continue # Timeout, loop again
                         
                         resp = line.decode('utf-8').strip()
-                        if resp:
-                            self.response_received.emit(resp)
+                        if not resp:
+                            continue
+                        
+                        self.response_received.emit(resp)
                             
                         if resp == 'ok':
                             break
-                        elif resp.lower().startswith('error') or resp.lower().startswith('alarm'):
-                            self.error_occurred.emit(f"GRBL Error: {resp}")
-                            self._is_running = False # Halt on error (per PRD)
+                        elif resp.lower().startswith('alarm'):
+                            # Alarm is fatal — halt immediately
+                            self.error_occurred.emit(f"GRBL Alarm: {resp}")
+                            self._is_running = False
                             break
+                        elif resp.lower().startswith('error'):
+                            # Non-alarm errors: log but continue to next command
+                            self.error_occurred.emit(f"GRBL Error (skipping): {resp}")
+                            break
+                        # Ignore info lines like [MSG:...], [HLP:...], Grbl banner, etc.
                             
                     # If queue empty, emit finished
                     with QMutexLocker(self._queue_mutex):
