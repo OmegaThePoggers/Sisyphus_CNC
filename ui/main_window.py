@@ -121,6 +121,10 @@ class MainWindow(QMainWindow):
         self.btn_set_center.setEnabled(False)
         top_bar.addWidget(self.btn_set_center)
         
+        self.btn_go_center = QPushButton("Go to Center")
+        self.btn_go_center.setEnabled(False)
+        top_bar.addWidget(self.btn_go_center)
+        
         self.refresh_ports()
         
         top_bar.addStretch()
@@ -182,6 +186,7 @@ class MainWindow(QMainWindow):
     def connect_signals(self):
         self.btn_connect.toggled.connect(self.toggle_connection)
         self.btn_set_center.clicked.connect(self.serial_controller.set_origin)
+        self.btn_go_center.clicked.connect(lambda: self.serial_controller.stop_and_return_to_center(self.config))
         
         # Navigation
         self.btn_home.clicked.connect(lambda: self.switch_mode(self.home_widget))
@@ -221,6 +226,7 @@ class MainWindow(QMainWindow):
 
     def on_connection_changed(self, is_connected):
         self.btn_set_center.setEnabled(is_connected)
+        self.btn_go_center.setEnabled(is_connected)
         self.combo_ports.setEnabled(not is_connected)
         self.btn_connect.setText("Disconnect" if is_connected else "Connect")
         self.btn_connect.setChecked(is_connected)
