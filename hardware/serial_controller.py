@@ -29,8 +29,12 @@ class SerialWorker(QThread):
             
             # Send initial reset (Ctrl-X)
             self.serial.write(b'\x18')
-            time.sleep(0.5)
+            time.sleep(1)
             self.serial.reset_input_buffer()
+            
+            # Send unlock ($X) and Absolute mode (G90) just in case
+            self._command_queue.insert(0, '$X')
+            self._command_queue.insert(1, 'G90')
 
         except serial.SerialException as e:
             self.error_occurred.emit(f"Connection failed: {e}")
@@ -48,8 +52,8 @@ class SerialWorker(QThread):
             
             if cmd:
                 try:
-                    # Clean and format command
-                    cmd_str = cmd.strip() + '\n'
+                    # Clean and format command (Grbl accepts \n or \r\n, \r\n is safer)
+                    cmd_str = cmd.strip() + '\r\n'
                     self.serial.write(cmd_str.encode('utf-8'))
                     self.line_sent.emit(cmd)
                     
