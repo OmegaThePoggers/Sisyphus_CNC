@@ -185,6 +185,9 @@ class MainWindow(QMainWindow):
         self.home_widget.btn_sim.clicked.connect(lambda: self.switch_mode(self.sim_widget))
         self.home_widget.btn_test_limits.clicked.connect(self.test_limits)
         
+        # Connect playlist generation to simulation payload
+        self.idle_widget.gcode_generated.connect(self._on_playlist_gcode_generated)
+        
         self.serial_controller.connection_state_changed.connect(self.on_connection_changed)
         self.serial_controller.error_occurred.connect(self.on_serial_error)
         self.serial_controller.connection_lost.connect(self.on_serial_lost)
@@ -192,6 +195,10 @@ class MainWindow(QMainWindow):
     def switch_mode(self, widget):
         self.stacked_widget.setCurrentWidget(widget)
         self.btn_home.setEnabled(widget != self.home_widget)
+
+    def _on_playlist_gcode_generated(self, gcode):
+        self.sim_widget._load_from_gcode_lines(gcode)
+        self.sim_widget.lbl_file_name.setText("Playlist Stream")
 
     def toggle_connection(self, checked):
         if checked:

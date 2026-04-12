@@ -17,6 +17,7 @@ class PlaylistWorker(QThread):
     pattern_started = Signal(str)
     all_finished = Signal()
     error_occurred = Signal(str)
+    gcode_generated = Signal(list)
 
     def __init__(self, serial_controller, config):
         super().__init__()
@@ -29,7 +30,8 @@ class PlaylistWorker(QThread):
         self._is_running = False
         self._mutex = QMutex()
         
-        self.transform_mode = False # For phase 5
+        self.transform_mode = False
+        self.simulate_only = False
 
     def set_playlist(self, paths):
         with QMutexLocker(self._mutex):
@@ -47,7 +49,7 @@ class PlaylistWorker(QThread):
             
         loop_index = 0
         while self._is_running:
-            if not self.serial_controller.is_connected():
+            if not self.simulate_only and not self.serial_controller.is_connected():
                 self.error_occurred.emit("Serial disconnected")
                 break
                 
@@ -98,15 +100,23 @@ class PlaylistWorker(QThread):
                 
                 self.progress_changed.emit(f"Drawing {filename}...", 50)
                 
-                # Stream the entire pattern
-                self.serial_controller.stream_gcode(gcode)
+                # Emit to simulation mode
+                self.gcode_generated.emit(gcode)
                 
-                # Wait for stream to finish securely (in a loop so we check is_running)
-                # This could be event-driven but since we're in a QThread, we can poll
-                # Wait, stream_gcode is threaded. Let's just monitor the queue size in a loop
                 import time
-                while self._is_running and self.serial_controller.worker and len(self.serial_controller.worker._command_queue) > 0:
-                    time.sleep(0.5)
+                if self.simulate_only:
+                    # In simulation-only mode, we just wait a fixed reasonable amount of time 
+                    # so the user can watch the preview in the simulation tab
+                    for _ in range(15): # 7.5 seconds
+                        if not self._is_running: break
+                        time.sleep(0.5)
+                else:
+                    # Stream the entire pattern to hardware
+                    self.serial_controller.stream_gcode(gcode)
+                    
+                    # Wait for hardware stream to finish
+                    while self._is_running and self.serial_controller.worker and len(self.serial_controller.worker._command_queue) > 0:
+                        time.sleep(0.5)
                 
                 if not self._is_running:
                     break
@@ -132,6 +142,8 @@ class PlaylistWorker(QThread):
         self._is_running = False
 
 class IdleModeWidget(QWidget):
+    gcode_generated = Signal(list)
+
     def __init__(self, serial_controller, parent=None):
         super().__init__(parent)
         self.serial_controller = serial_controller
@@ -181,8 +193,10 @@ class IdleModeWidget(QWidget):
         self.btn_pause.setEnabled(False)
         self.btn_stop.setEnabled(False)
         
-        self.chk_transform = QCheckBox("Enable Transform Mode (Phase 5)")
+        self.chk_transform = QCheckBox("Enable Transform Mode")
         self.chk_transform.setEnabled(True)
+        
+        self.chk_simulate = QCheckBox("Simulate Only (No Hardware)")
         
         self.lbl_status = QLabel("Ready")
         self.progress = QProgressBar()
@@ -192,6 +206,7 @@ class IdleModeWidget(QWidget):
         controls_layout.addWidget(self.btn_stop)
         controls_layout.addSpacing(20)
         controls_layout.addWidget(self.chk_transform)
+        controls_layout.addWidget(self.chk_simulate)
         controls_layout.addStretch()
         controls_layout.addWidget(self.lbl_status)
         controls_layout.addWidget(self.progress)
@@ -211,7 +226,9 @@ class IdleModeWidget(QWidget):
         self.worker.pattern_started.connect(self.on_pattern_started)
         self.worker.all_finished.connect(self.on_finished)
         self.worker.error_occurred.connect(self.on_error)
+        self.worker.gcode_generated.connect(self.gcode_generated)
         
+        self.chk_simulate.toggled.connect(self.update_ui_state)
         self.serial_controller.connection_state_changed.connect(self.on_connection_changed)
 
     def add_file(self):
@@ -248,6 +265,7 @@ class IdleModeWidget(QWidget):
             return
             
         self.worker.transform_mode = self.chk_transform.isChecked()
+        self.worker.simulate_only = self.chk_simulate.isChecked()
         self.worker.set_playlist(paths)
         self.worker.start()
         
@@ -292,9 +310,10 @@ class IdleModeWidget(QWidget):
     def update_ui_state(self):
         has_items = self.list_widget.count() > 0
         is_conn = self.serial_controller.is_connected()
-        self.btn_start.setEnabled(has_items and is_conn and not self.worker.isRunning())
+        can_start = has_items and (is_conn or self.chk_simulate.isChecked())
+        self.btn_start.setEnabled(can_start and not self.worker.isRunning())
         
     def on_connection_changed(self, is_connected):
         self.update_ui_state()
-        if not is_connected and self.worker.isRunning():
+        if not is_connected and self.worker.isRunning() and not self.chk_simulate.isChecked():
             self.stop_playlist()
