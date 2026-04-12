@@ -99,8 +99,13 @@ class MainWindow(QMainWindow):
         top_bar = QHBoxLayout()
         
         self.btn_home = QPushButton("Home")
-        self.btn_home.setFixedWidth(100)
-        top_bar.addWidget(self.btn_home)
+        self.btn_nav_idle = QPushButton("Playlist")
+        self.btn_nav_custom = QPushButton("Custom")
+        self.btn_nav_sim = QPushButton("Simulation")
+        
+        for btn in [self.btn_home, self.btn_nav_idle, self.btn_nav_custom, self.btn_nav_sim]:
+            btn.setFixedWidth(80)
+            top_bar.addWidget(btn)
         
         top_bar.addSpacing(20)
         top_bar.addWidget(QLabel("Serial Port:"))
@@ -180,6 +185,10 @@ class MainWindow(QMainWindow):
         
         # Navigation
         self.btn_home.clicked.connect(lambda: self.switch_mode(self.home_widget))
+        self.btn_nav_idle.clicked.connect(lambda: self.switch_mode(self.idle_widget))
+        self.btn_nav_custom.clicked.connect(lambda: self.switch_mode(self.custom_widget))
+        self.btn_nav_sim.clicked.connect(lambda: self.switch_mode(self.sim_widget))
+        
         self.home_widget.btn_idle.clicked.connect(lambda: self.switch_mode(self.idle_widget))
         self.home_widget.btn_custom.clicked.connect(lambda: self.switch_mode(self.custom_widget))
         self.home_widget.btn_sim.clicked.connect(lambda: self.switch_mode(self.sim_widget))
